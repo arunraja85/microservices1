@@ -4,9 +4,9 @@ env: flex
 
 handlers:
 -  url: /.*
-
+   script: this field is required , bu ignored
 runtime_config:
-  jdk: openjdk11
+  jdk: openjdk8
   
 automatic_scaling:
   min_num_instances: 1
