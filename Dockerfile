@@ -1,4 +1,5 @@
-FROM openjdk:8-jdk-alpine
+#FROM openjdk:8-jdk-alpine
+FROM maven:3.8.4-jdk-11
 VOLUME /tmp
 COPY src /usr/src/app/src  
 COPY pom.xml /usr/src/app 
