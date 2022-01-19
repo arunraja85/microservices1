@@ -31,7 +31,7 @@ public class MSController {
 	public ResponseEntity<String> getNames() throws Exception{
 		logger.info("Entering into the method getnames ");
 		if(true){
-			throw new Exception("Hai Arun Exception");
+			throw new Exception("Hai Arun Exception ");
 		}
 		return ResponseEntity.ok("Arunraja Jayavel");
 	}
