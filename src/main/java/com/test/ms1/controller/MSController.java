@@ -28,8 +28,11 @@ public class MSController {
 	
 	
 	@GetMapping("/names")
-	public ResponseEntity<String> getNames(){
+	public ResponseEntity<String> getNames() throws Exception{
 		logger.info("Entering into the method getnames ");
+		if(true){
+			throw new Exception("Hai Arun Exception");
+		}
 		return ResponseEntity.ok("Arunraja Jayavel");
 	}
 }
