@@ -4,7 +4,7 @@ steps:
     args: ['package','-Dmaven.test.skip=true']
   - name: 'gcr.io/cloud-builders/docker'
     args: [ 'build','-t','gcr.io/$PROJECT_ID/helloworld-image', '.']
-  - name: 'gcr.io/cloud-builders/gcloud'
+  - name: google/cloud-sdk
     args: ['gcloud','run','deploy','microservice1','--image','gcr.io/$PROJECT_ID/helloworld-image','--platform','managed','--region','us-central1','--max-instances','1','--project','$PROJECT_ID']
 images:
   - 'gcr.io/$PROJECT_ID/helloworld-image'
