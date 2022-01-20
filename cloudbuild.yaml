@@ -7,6 +7,6 @@ steps:
   - name:  'gcr.io/cloud-builders/docker'
     args: [ 'push','gcr.io/$PROJECT_ID/helloworld-image:0.0.1']
   - name: google/cloud-sdk
-    args: ['gcloud','run','deploy','microservice1','--image','gcr.io/$PROJECT_ID/helloworld-image','--platform','managed','--region','us-central1','--max-instances','1','--project','$PROJECT_ID']
+    args: ['gcloud','run','deploy','microservice1','--image','gcr.io/$PROJECT_ID/helloworld-image:0.0.1','--platform','managed','--region','us-central1','--max-instances','1','--project','$PROJECT_ID']
 images:
   - 'gcr.io/$PROJECT_ID/helloworld-image:0.0.1'
