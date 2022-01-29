@@ -1,0 +1,22 @@
+git config --global --unset credential.helper
+git config --system --unset credential.helper
+git config --system --list
+git config --global --list
+
+in command prompt 
+
+cmdkey /list
+
+git config --system --add credential.helper manager
+git config --system --add credential.helper wincred
+
+git remote set-url origin https://arunraja85@github.com/arunraja85/microservices1.git
+git remote remove origin
+
+git remote set-url origin https://github.com/arunraja85/microservices1.git
+
+git remote add origin https://github.com/arunraja85/microservices1.git
+
+git config --global core.preloadindex true  
+git config --global core.fscache true  
+git config --global gc.auto 256  
